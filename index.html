@@ -9,24 +9,56 @@
     :root{
       --bg:#fff;
       --ink:#222;
-      --muted:#6b7280;
+      --muted:#e5e7eb;
       --accent:#c084fc;
       --nav:#d4af37;
       --card:#fafafa;
       --line:rgba(0,0,0,.08);
     }
     *{box-sizing:border-box}
-    body{margin:0;color:var(--ink);font:21px/1.7 'Franklin Gothic Medium','Franklin Gothic','ITC Franklin Gothic','Montserrat','Poppins',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:transparent}
+    body{
+      margin:0;
+      color:#fff;
+      font:21px/1.7 'Franklin Gothic Medium','Franklin Gothic','ITC Franklin Gothic','Montserrat','Poppins',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      background:transparent;
+    }
+    /* Pozadina sa leptirima */
     body::before{
       content:"";
       position:fixed; inset:0; z-index:-1;
-      background: url('pozadina.jpg') center center / cover no-repeat;) center / cover no-repeat fixed;
+      background: url('pozadina.jpg') center center / cover no-repeat fixed;
     }
+
     a{color:#fff;text-decoration:none;text-shadow:0 2px 6px rgba(0,0,0,.6)}
-    header{position:sticky;top:0;z-index:50;background:var(--nav);border-bottom:1px solid var(--line)}
-    .nav{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 18px}
-    .brand{font-weight:700;color:#7c3aed;font-size:28px;font-family:'Vivaldi','Edwardian Script ITC','Lucida Calligraphy','Segoe Script','Brush Script MT','Great Vibes',cursive;text-shadow:0 2px 6px rgba(0,0,0,.25);letter-spacing:.5px}
-    .menu a{margin-left:18px;opacity:.9;font-size:18px}
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:var(--nav);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{
+      max-width:1100px;
+      margin:0 auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:14px 18px;
+    }
+    .brand{
+      font-weight:700;
+      color:#fff;
+      font-size:28px;
+      font-family:'Vivaldi','Edwardian Script ITC','Lucida Calligraphy','Segoe Script','Brush Script MT','Great Vibes',cursive;
+      text-shadow:0 2px 6px rgba(0,0,0,.25);
+      letter-spacing:.5px;
+    }
+    .menu a{
+      margin-left:18px;
+      opacity:.95;
+      font-size:18px;
+    }
     .menu a:hover{opacity:1}
 
     .hero{
@@ -38,132 +70,247 @@
       color:#fff;
       padding:56px 18px;
       isolation:isolate;
-      background-size:cover;
-      background-position:center;
-      background-repeat:no-repeat;
     }
     .hero::after{
       content:"";
-      position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,.35));
+      position:absolute;inset:0;
+      background:linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,.35));
       z-index:-1;
     }
-    .hero h1{font-size:clamp(28px,5vw,48px);margin:0 0 6px;text-shadow:0 2px 10px rgba(0,0,0,.35)}
-    .hero p{margin:0 0 14px;opacity:.95}
-    .btn{display:inline-block;background:var(--accent);color:#fff;padding:12px 20px;border-radius:999px;font-weight:700}
+    .hero h1{
+      font-size:clamp(28px,5vw,48px);
+      margin:0 0 6px;
+      text-shadow:0 2px 10px rgba(0,0,0,.35);
+    }
+    .hero p{
+      margin:0 0 14px;
+      opacity:.95;
+    }
+    .btn{
+      display:inline-block;
+      background:var(--accent);
+      color:#fff;
+      padding:12px 20px;
+      border-radius:999px;
+      font-weight:700;
+      text-shadow:none;
+      box-shadow:0 10px 25px rgba(0,0,0,.35);
+    }
 
-    main{max-width:1100px;margin:0 auto;padding:28px 18px}
-    section{padding:56px 0;background:transparent}
-    h2{margin:0 0 12px;font-size:32px;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.55)}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-p, li {color:#fff; text-shadow:0 2px 6px rgba(0,0,0,.6)}
-strong, em, .card *, .grid * { color:#fff !important; text-shadow:0 2px 6px rgba(0,0,0,.6) }
-    .card{background:transparent;border:none;border-radius:0;padding:0;box-shadow:none}
+    main{
+      max-width:1100px;
+      margin:0 auto;
+      padding:28px 18px 40px;
+    }
+    section{
+      padding:56px 0 0;
+      background:transparent;
+    }
+    h2{
+      margin:0 0 12px;
+      font-size:32px;
+      color:#fff;
+      text-shadow:0 2px 8px rgba(0,0,0,.55);
+    }
+    p, li{
+      color:#fff;
+      text-shadow:0 2px 6px rgba(0,0,0,.6);
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:16px;
+    }
+    .card{
+      background:transparent;
+      border:none;
+      padding:0;
+      box-shadow:none;
+    }
 
-    footer{text-align:center;color:var(--muted);padding:26px}
-  
-    /* Floating WhatsApp button */
+    footer{
+      text-align:center;
+      color:#e5e7eb;
+      padding:26px 18px 30px;
+      font-size:14px;
+    }
+
+    /* WhatsApp plivajući */
     .whatsapp-fab{
       position: fixed;
       right: 18px;
       bottom: 18px;
-      width: 56px; height: 56px;
+      width: 56px; 
+      height: 56px;
       border-radius: 999px;
       background: #25D366;
       box-shadow: 0 8px 24px rgba(0,0,0,.25);
-      display: grid; place-items: center;
+      display: grid; 
+      place-items: center;
       z-index: 60;
     }
-    .whatsapp-fab svg{width: 28px; height: 28px; fill: #fff}
-    .whatsapp-fab:focus{outline: 3px solid rgba(37,211,102,.4); outline-offset: 3px}
+    .whatsapp-fab svg{
+      width: 28px; 
+      height: 28px; 
+      fill: #fff;
+    }
+
     @media (pointer: coarse){
       .whatsapp-fab{width:64px;height:64px}
       .whatsapp-fab svg{width:32px;height:32px}
     }
 
-  
-/* --- PATCH: size + brand color --- */
-body { font-size: 21px !important; }
-nav a:first-child,
-.header .brand, .brand,
-nav .brand, a.logo, .logo, header .logo, header .site-title {
-  color: #fff !important;
-}
+    /* PORTFOLIO – Sandra + tekst + 2 fotke */
+    .portfolio-cert{
+      display:grid;
+      grid-template-columns:minmax(0, 1fr) minmax(0, 1.1fr);
+      gap:24px;
+      align-items:center;
+      margin-top:12px;
+      margin-bottom:28px;
+    }
+    .portfolio-photo{
+      display:flex;
+      justify-content:flex-start;
+    }
+    .portfolio-photo img{
+      max-width:360px;
+      width:100%;
+      border-radius:16px;
+      box-shadow:0 14px 35px rgba(0,0,0,.35);
+      display:block;
+    }
+    .portfolio-text p{
+      margin-top:0;
+      margin-bottom:10px;
+    }
 
-/* --- PATCH: golden nav bar --- */
-nav, header nav, .topbar, .navbar {
-  background: var(--nav) !important;
-}
-nav a, header nav a, .navbar a {
-  color: #fff !important;
-}
-</style>
-<style id="mobile-9x16-patch">
-/* Univerzalno: bez lomljenja layouta */
-img, video { max-width: 100%; height: auto; display: block; }
-.bg-cover { background-size: cover; background-position: center; background-repeat: no-repeat; }
+    .portfolio-works{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:20px;
+      margin-top:12px;
+      margin-bottom:32px;
+    }
+    .portfolio-works img{
+      width:100%;
+      border-radius:16px;
+      box-shadow:0 12px 30px rgba(0,0,0,.35);
+      display:block;
+      object-fit:cover;
+    }
 
-/* Tekst preko fotografije – diskretno pojačaj čitljivost (bez "kutija") */
-.text-on-photo { text-shadow: 0 2px 4px rgba(0,0,0,.25); }
+    /* KARUSEL – povratak na stabilnu varijantu (bez cimanja samo za 8) */
+    .portfolio-carousel{
+      margin-top:10px;
+      text-align:center;
+    }
+    .portfolio-carousel h3{
+      margin:0 0 12px;
+      font-size:26px;
+      color:#fff;
+      text-shadow:0 2px 8px rgba(0,0,0,.55);
+    }
+    .carousel{
+      position:relative;
+      max-width:900px;
+      margin:0 auto;
+    }
+    .carousel-window{
+      overflow:hidden;
+      border-radius:18px;
+      box-shadow:0 14px 40px rgba(0,0,0,.4);
+      background:#000;
+      /* fiksan odnos 16:9 da NEMA izduživanja */
+      aspect-ratio:16/9;
+    }
+    .carousel-track{
+      display:flex;
+      height:100%;
+      transition:transform .4s ease-in-out;
+    }
+    .carousel-track img{
+      flex:0 0 100%;
+      width:100%;
+      height:100%;
+      display:block;
+      object-fit:cover;   /* bez object-position, default centar */
+    }
+    .carousel-btn{
+      position:absolute;
+      top:50%;
+      transform:translateY(-50%);
+      width:40px;height:40px;
+      border-radius:999px;
+      border:none;
+      background:rgba(0,0,0,.45);
+      color:#fff;
+      font-size:24px;
+      display:grid;
+      place-items:center;
+      cursor:pointer;
+      backdrop-filter:blur(4px);
+    }
+    .carousel-btn:hover{
+      background:rgba(0,0,0,.65);
+    }
+    .carousel-btn.prev{left:10px;}
+    .carousel-btn.next{right:10px;}
 
-/* 9:16 i uže (tipično mobilni + Instagram in-app) */
-@media (max-aspect-ratio: 9/16), (max-width: 420px) {
-  /* Blago uvećaj bazni tekst, skrati dužinu reda */
-  html { font-size: 18px; }
-  p, li { line-height: 1.6; max-width: 32ch; }
+    @media (max-width: 768px){
+      .portfolio-cert{
+        grid-template-columns:1fr;
+      }
+      .portfolio-photo{
+        justify-content:center;
+      }
+      .portfolio-works{
+        grid-template-columns:1fr;
+      }
+      .carousel-btn{
+        width:34px;height:34px;font-size:20px;
+      }
+    }
+  </style>
 
-  /* Sve “dve kolone” -> jedan stub; prilagodi po svojim klasama ako ih već koristiš */
-  .grid-2, .cols-2, .two-col { display: grid; grid-template-columns: 1fr !important; gap: 20px; }
+  <!-- 9:16 patch (stari koji je već radio) -->
+  <style id="mobile-9x16-patch">
+    img, video { max-width: 100%; height: auto; display: block; }
+    .bg-cover { background-size: cover; background-position: center; background-repeat: no-repeat; }
 
-  /* Hero/cover sekcije – pravilno kadriranje i pun ekran */
-  .hero, .cover, .section-cover {
-    min-height: 100dvh; /* moderni mobilni */
-    min-height: 100vh;  /* fallback */
-    display: grid; place-items: center;
-    padding: 16dvh 6vw 12dvh;
-    position: relative;
-  }
+    @media (max-aspect-ratio: 9/16), (max-width: 420px) {
+      html { font-size: 18px; }
+      p, li { line-height: 1.6; max-width: 32ch; }
 
-  /* Unutrašnji sadržaj – centriran i čitljiv */
-  .hero .content, .cover .content, .section-cover .content {
-    max-width: 28rem; text-align: center;
-  }
+      .grid-2, .cols-2, .two-col {
+        display: grid; grid-template-columns: 1fr !important; gap: 20px;
+      }
 
-  /* Slike/video unutar “cover” sekcija – bez zgnječenja */
-  .hero img, .hero video,
-  .cover img, .cover video,
-  .section-cover img, .section-cover video {
-    width: 100%; height: 100%; object-fit: cover; object-position: center;
-  }
+      .hero, .cover, .section-cover {
+        min-height: 100dvh;
+        min-height: 100vh;
+        display: grid; place-items: center;
+        padding: 16dvh 6vw 12dvh;
+        position: relative;
+      }
 
-  /* CTA može “lebdeti” pri dnu, iznad safe-area */
-  .cta-sticky { position: sticky; bottom: 2rem; }
-}
+      .hero .content, .cover .content, .section-cover .content {
+        max-width: 28rem; text-align: center;
+      }
 
-/* iPhone notch safe-area kad je fullscreen header/hero */
-@supports (padding: env(safe-area-inset-top)) {
-  .hero, .cover, .section-cover { padding-top: calc(16dvh + env(safe-area-inset-top)); }
-}
-</style>
-<style id="font-scale-115">
-/* Global +15% font scaling */
-:root { --font-scale: 1.15; }
-html { font-size: calc(16px * var(--font-scale)); }
+      .hero img, .hero video,
+      .cover img, .cover video,
+      .section-cover img, .section-cover video {
+        width: 100%; height: 100%; object-fit: cover; object-position: center;
+      }
 
-/* Keep top navigation tidy despite larger base font */
-header nav a, nav a, .topnav a, .menu a, .navbar a { 
-  font-size: 0.95rem; 
-  line-height: 1.2;
-  white-space: nowrap;
-}
-header, .navbar, .topnav { 
-  line-height: 1.1; 
-}
-/* Slightly flexible spacing between nav items */
-header nav, nav ul, .navbar ul, .topnav ul { 
-  column-gap: clamp(8px, 1vw, 16px); 
-  gap: clamp(8px, 1vw, 16px);
-}
-</style>
+      .cta-sticky { position: sticky; bottom: 2rem; }
+    }
+
+    @supports (padding: env(safe-area-inset-top)) {
+      .hero, .cover, .section-cover { padding-top: calc(16dvh + env(safe-area-inset-top)); }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -191,15 +338,65 @@ header nav, nav ul, .navbar ul, .topnav ul {
     <section id="usluge">
       <h2>Usluge</h2>
       <div class="grid">
-        <div class="card"><strong>Manikir</strong><br><span class="muted">Kombinovane tehnike i precizno oblikovanje.</span></div>
-        <div class="card"><strong>Nail art</strong><br><span class="muted">Detaljni dizajni inspirisani prirodom.</span></div>
-        <div class="card"><strong>Gel/akril</strong><br><span class="muted">Trajna izdržljivost i visok sjaj.</span></div>
+        <div class="card">
+          <strong>Manikir</strong><br>
+          Kombinovane tehnike i precizno oblikovanje.
+        </div>
+        <div class="card">
+          <strong>Nail art</strong><br>
+          Detaljni dizajni inspirisani prirodom.
+        </div>
+        <div class="card">
+          <strong>Gel/akril</strong><br>
+          Trajna izdržljivost i visok sjaj.
+        </div>
       </div>
     </section>
 
     <section id="portfolio">
       <h2>Portfolio</h2>
-      <p class="muted">Ovde ide galerija radova (slike/karusel) – možeš dodati svoje fotografije.</p>
+
+      <!-- Sandra + sertifikat + tekst -->
+      <div class="portfolio-cert">
+        <div class="portfolio-photo">
+          <img src="sandra_certifikat.jpg" alt="Sandra drži sertifikat o završenoj edukaciji">
+        </div>
+        <div class="portfolio-text">
+          <p>Sertifikat je samo dokument – pravi kvalitet dolazi iz profesionalnog pristupa i želje za stalnim usavršavanjem.</p>
+          <p>On potvrđuje stečeno znanje, ali i pažnju prema higijeni, detaljima i savremenim tehnikama rada.</p>
+          <p>Svakom klijentu Sandra pristupa individualno, birajući oblik, boje i stil koji najbolje ističu ličnost, stil života, ali i ličnu želju svake žene.</p>
+          <p>Iznad svega, svoj posao radi iz velike ljubavi, zato su njeni radovi uvek spoj estetike, preciznosti i toplog, prijateljskog pristupa.</p>
+        </div>
+      </div>
+
+      <!-- Dve statične fotke radova -->
+      <div class="portfolio-works">
+        <img src="rad1.jpg" alt="Primer rada – nail art 1">
+        <img src="rad2.jpg" alt="Primer rada – nail art 2">
+      </div>
+
+      <!-- KARUSEL sa svim primerima, uključujući 8 -->
+      <div class="portfolio-carousel">
+        <h3>Još Sandrinih radova</h3>
+        <div class="carousel">
+          <button class="carousel-btn prev" aria-label="Prethodna fotografija">‹</button>
+          <div class="carousel-window">
+            <div class="carousel-track">
+              <img src="sandra_primer.jpg"   alt="Primer Sandrinog rada 0">
+              <img src="sandra_primer_1.jpg" alt="Primer Sandrinog rada 1">
+              <img src="sandra_primer_2.jpg" alt="Primer Sandrinog rada 2">
+              <img src="sandra_primer_3.jpg" alt="Primer Sandrinog rada 3">
+              <img src="sandra_primer_4.jpg" alt="Primer Sandrinog rada 4">
+              <img src="sandra_primer_5.jpg" alt="Primer Sandrinog rada 5">
+              <img src="sandra_primer_6.jpg" alt="Primer Sandrinog rada 6">
+              <img src="sandra_primer_7.jpg" alt="Primer Sandrinog rada 7">
+              <img src="sandra_primer_8.jpg" alt="Primer Sandrinog rada 8">
+              <img src="sandra_primer_9.jpg" alt="Primer Sandrinog rada 9">
+            </div>
+          </div>
+          <button class="carousel-btn next" aria-label="Sledeća fotografija">›</button>
+        </div>
+      </div>
     </section>
 
     <section id="zasto">
@@ -212,23 +409,61 @@ header nav, nav ul, .navbar ul, .topnav ul {
     </section>
 
     <section id="prica">
-      <h2>Naša priča</h2>
-      <p>Par rečenica o brendu, inspiraciji i iskustvu. Tekst možeš lako zameniti svojim.</p>
-    </section>
+  <h2>Naša priča</h2>
+  <p>
+    Butterfly Nails je nastao iz jednostavne želje – da svaki nokat bude mali komadić lične elegancije,
+    a ne samo „još jedan termin“. Kroz godine rada, Sandra je shvatila da žene ne traže samo boju ili oblik,
+    već trenutak za sebe, pažnju i nekoga ko zaista sluša njihove želje. Ako ti se dopada ono što vidiš na
+    ovoj web stranici, biće mi zadovoljstvo da i tvoje nokte pretvorim u priču koja ti prija svaki put kad
+    pogledaš svoje ruke.
+  </p>
+</section>
+
 
     <section id="kontakt">
       <h2>Kontakt</h2>
-      <p>E‑mail: <a href="mailto:sandraadamovic33@gmail.com">sandraadamovic33@gmail.com</a><br>
-         Tel: <a href="tel:+381605124720">+381 605124720</a></p>
+      <p>
+        E-mail: <a href="mailto:sandraadamovic33@gmail.com">sandraadamovic33@gmail.com</a><br>
+        Tel: <a href="tel:+381605124720">+381 605124720</a>
+      </p>
     </section>
   </main>
 
-  <footer>© sandbox</footer>
+  <footer>© Butterfly Nails – Sandra</footer>
 
-  <a class="whatsapp-fab" href="https://wa.me/381605124720?text=Zdravo%2C%20zainteresovan%2Fa%20sam%20za%20usluge%20Butterfly Nails%20Nails." target="_blank" rel="noopener" aria-label="WhatsApp poziv/poruka">
-    <!-- WhatsApp icon (SVG) -->
-    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M19.1 17.6c-.3-.2-.7-.4-1.1-.3-.3.1-.5.5-.8.7-.1.1-.2.2-.3.2-.2 0-.4-.1-.6-.2-1.2-.6-2.1-1.5-2.8-2.6-.1-.2-.2-.4-.2-.6 0-.1.1-.2.2-.3.2-.2.5-.4.6-.7.1-.3 0-.7-.1-1-.2-.5-.5-1.1-.9-1.5-.2-.2-.5-.3-.8-.3-.2 0-.4 0-.6.1-.7.2-1.2.8-1.4 1.5-.1.7 0 1.4.3 2 .6 1.3 1.4 2.5 2.5 3.4 1.4 1.2 3 2.1 4.9 2.3.7.1 1.4 0 2-.3.7-.3 1.1-.9 1.3-1.6.1-.3 0-.6-.3-.8zM16 3C9.9 3 5 7.9 5 14c0 2.2.7 4.2 1.8 5.9L6 27l7.3-1.9c1.6.9 3.4 1.4 5.3 1.4 6.1 0 11-4.9 11-11S22.1 3 16 3zm0 20.6c-1.7 0-3.3-.5-4.7-1.3l-.3-.2-4 .9.9-3.9-.2-.3C6.8 17.3 6.2 15.7 6.2 14 6.2 8.9 10.9 4.2 16 4.2S25.8 8.9 25.8 14 21.1 23.6 16 23.6z"/></svg>
+  <!-- WhatsApp dugme -->
+  <a class="whatsapp-fab"
+     href="https://wa.me/381605124720?text=Zdravo%2C%20zainteresovan%2Fa%20sam%20za%20usluge%20Butterfly%20Nails."
+     target="_blank" rel="noopener" aria-label="WhatsApp poruka ili poziv">
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path d="M19.1 17.6c-.3-.2-.7-.4-1.1-.3-.3.1-.5.5-.8.7-.1.1-.2.2-.3.2-.2 0-.4-.1-.6-.2-1.2-.6-2.1-1.5-2.8-2.6-.1-.2-.2-.4-.2-.6 0-.1.1-.2.2-.3.2-.2.5-.4.6-.7.1-.3 0-.7-.1-1-.2-.5-.5-1.1-.9-1.5-.2-.2-.5-.3-.8-.3-.2 0-.4 0-.6.1-.7.2-1.2.8-1.4 1.5-.1.7 0 1.4.3 2 .6 1.3 1.4 2.5 2.5 3.4 1.4 1.2 3 2.1 4.9 2.3.7.1 1.4 0 2-.3.7-.3 1.1-.9 1.3-1.6.1-.3 0-.6-.3-.8zM16 3C9.9 3 5 7.9 5 14c0 2.2.7 4.2 1.8 5.9L6 27l7.3-1.9c1.6.9 3.4 1.4 5.3 1.4 6.1 0 11-4.9 11-11S22.1 3 16 3zm0 20.6c-1.7 0-3.3-.5-4.7-1.3l-.3-.2-4 .9.9-3.9-.2-.3C6.8 17.3 6.2 15.7 6.2 14 6.2 8.9 10.9 4.2 16 4.2S25.8 8.9 25.8 14 21.1 23.6 16 23.6z"/>
+    </svg>
   </a>
 
+  <!-- JS za karusel – jednostavan, kao pre -->
+  <script>
+    (function () {
+      const track = document.querySelector('.carousel-track');
+      if (!track) return;
+      const slides = Array.from(track.children);
+      const prevBtn = document.querySelector('.carousel-btn.prev');
+      const nextBtn = document.querySelector('.carousel-btn.next');
+      let currentIndex = 0;
+
+      function showSlide(index){
+        if (!slides.length) return;
+        currentIndex = (index + slides.length) % slides.length;
+        track.style.transform = 'translateX(-' + (currentIndex * 100) + '%)';
+      }
+
+      prevBtn.addEventListener('click', () => showSlide(currentIndex - 1));
+      nextBtn.addEventListener('click', () => showSlide(currentIndex + 1));
+
+      // lagani autoplay (možeš obrisati ovaj deo ako ne želiš)
+      setInterval(() => {
+        showSlide(currentIndex + 1);
+      }, 5000);
+    })();
+  </script>
 </body>
 </html>
