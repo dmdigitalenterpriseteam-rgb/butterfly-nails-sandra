@@ -200,7 +200,7 @@
       object-fit:cover;
     }
 
-    /* KARUSEL – povratak na stabilnu varijantu (bez cimanja samo za 8) */
+    /* KARUSEL */
     .portfolio-carousel{
       margin-top:10px;
       text-align:center;
@@ -234,7 +234,7 @@
       width:100%;
       height:100%;
       display:block;
-      object-fit:cover;   /* bez object-position, default centar */
+      object-fit:cover;
     }
     .carousel-btn{
       position:absolute;
@@ -273,7 +273,7 @@
     }
   </style>
 
-  <!-- 9:16 patch (stari koji je već radio) -->
+  <!-- 9:16 patch za mobilni prikaz -->
   <style id="mobile-9x16-patch">
     img, video { max-width: 100%; height: auto; display: block; }
     .bg-cover { background-size: cover; background-position: center; background-repeat: no-repeat; }
@@ -375,7 +375,7 @@
         <img src="rad2.jpg" alt="Primer rada – nail art 2">
       </div>
 
-      <!-- KARUSEL sa svim primerima, uključujući 8 -->
+      <!-- KARUSEL sa primerima -->
       <div class="portfolio-carousel">
         <h3>Još Sandrinih radova</h3>
         <div class="carousel">
@@ -409,16 +409,15 @@
     </section>
 
     <section id="prica">
-  <h2>Naša priča</h2>
-  <p>
-    Butterfly Nails je nastao iz jednostavne želje – da svaki nokat bude mali komadić lične elegancije,
-    a ne samo „još jedan termin“. Kroz godine rada, Sandra je shvatila da žene ne traže samo boju ili oblik,
-    već trenutak za sebe, pažnju i nekoga ko zaista sluša njihove želje. Ako ti se dopada ono što vidiš na
-    ovoj web stranici, biće mi zadovoljstvo da i tvoje nokte pretvorim u priču koja ti prija svaki put kad
-    pogledaš svoje ruke.
-  </p>
-</section>
-
+      <h2>Naša priča</h2>
+      <p>
+        Butterfly Nails je nastao iz jednostavne želje – da svaki nokat bude mali komadić lične elegancije,
+        a ne samo „još jedan termin“. Kroz godine rada, Sandra je shvatila da žene ne traže samo boju ili oblik,
+        već trenutak za sebe, pažnju i nekoga ko zaista sluša njihove želje. Ako ti se dopada ono što vidiš na
+        ovoj web stranici, biće mi zadovoljstvo da i tvoje nokte pretvorim u priču koja ti prija svaki put kad
+        pogledaš svoje ruke.
+      </p>
+    </section>
 
     <section id="kontakt">
       <h2>Kontakt</h2>
@@ -440,7 +439,7 @@
     </svg>
   </a>
 
-  <!-- JS za karusel – jednostavan, kao pre -->
+  <!-- JS za karusel -->
   <script>
     (function () {
       const track = document.querySelector('.carousel-track');
@@ -459,7 +458,7 @@
       prevBtn.addEventListener('click', () => showSlide(currentIndex - 1));
       nextBtn.addEventListener('click', () => showSlide(currentIndex + 1));
 
-      // lagani autoplay (možeš obrisati ovaj deo ako ne želiš)
+      // lagani autoplay (po želji možeš obrisati)
       setInterval(() => {
         showSlide(currentIndex + 1);
       }, 5000);
